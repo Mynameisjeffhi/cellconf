@@ -1,0 +1,23 @@
+@charset "utf8";
+
+.opt-header,.opt-footer{width: 952px;margin:0 auto;}
+.opt-header h1{font-weight: bold;font-size: 15px;color: #333;margin: 20px 6px;}
+.content {width: 952px;margin:0 auto 30px;height: 600px;border:1px dashed #DDD;}
+.content input{font: 13px "微软雅黑", tahoma;}
+.comm-input{
+    margin: 0 9px;border: 1px solid #E3E3E6;width: 150px;
+    height: 16px;line-height: 20px;padding: 3px 6px;
+    background-color: #F3F3F3;}
+
+.content .cell-css{margin:10px 10px 10px 15px; }
+.content .option-output{margin:10px 10px 10px 15px;border:1px solid #DDD;padding: 10px 20px;overflow: hidden;}
+.content .cell-css .css-item{height:30px;line-height: 24px;}
+.content .cell-css .css-item-switch{margin-right: 8px;}
+.content .cell-css .css-key{width: 110px;display: inline-block;overflow: hidden;}
+.content .cell-css select,.content .cell-css .css-status{margin: 0 6px;}
+.content .sec-title{font-weight:bold;font-size:14px;margin: 12px 15px;}
+
+@-moz-document url-prefix() {
+  .content .cell-css .css-item-switch {height: 16px;}
+  .content .cell-css .css-key{height:20px;}
+}
