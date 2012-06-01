@@ -1,5 +1,5 @@
 
-## A Cell Data Options Generation Tool
+## A Cell Data-Options Generating Tool
 
 ### Usage:
 
