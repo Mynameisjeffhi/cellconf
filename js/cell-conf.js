@@ -3,7 +3,7 @@
  * @ 2012/05/30 13:30:00
  */
 jQuery(function($){
-    // TODO: HOVER 的时候对应配置项json串高亮显示，方便人工校验；editAttr 处理；
+    // TODO: editAttr 处理；
     var module = {
         /**
          * 所有可选编辑类型
@@ -109,28 +109,28 @@ jQuery(function($){
                 htmlArray.push('<label for="item-' + confItem.key + '" class="item-key">' + confItem.key + '</label>');
 
                 if(!!confItem.conf && confItem.conf.length > 0){
-                    var abItme, idName;
+                    var abItem, idName;
                     for(var m = 0,  n = confItem.conf.length; m < n; m++){
 
-                        abItme = confItem.conf[m];
+                        abItem = confItem.conf[m];
 
-                        if( abItme.type === 'checkbox' ){
+                        if( abItem.type === 'checkbox' ){
 
-                          idName = 'item-ck-' + confItem.key + '-' + abItme.name;
+                          idName = 'item-ck-' + confItem.key + '-' + abItem.name;
 
-                          if(abItme.checked){
+                          if(abItem.checked){
                             htmlArray.push('<input type="checkbox" class="item-ck" checked id="' + idName + '">');
                           }else{
                             htmlArray.push('<input type="checkbox" class="item-ck" id="' + idName + '">');
                           }
 
-                          htmlArray.push('<label for="' + idName + '">' + abItme.name + '</label>');
+                          htmlArray.push('<label for="' + idName + '">' + abItem.name + '</label>');
 
-                        }else if( abItme.type === 'text' ){
+                        }else if( abItem.type === 'text' ){
 
-                          idName = 'item-ipt-' + confItem.key + '-' + abItme.name;
-                          htmlArray.push('<span class="item-text-title">' + abItme.name + '</span>:');
-                          htmlArray.push('<input class="item-text-ipt comm-input" type="text" id="' + idName + '" style="width:' + abItme.iptWidth + '" value="' + (!!abItme.val?abItme.val:"") + '">');
+                          idName = 'item-ipt-' + confItem.key + '-' + abItem.name;
+                          htmlArray.push('<span class="item-text-title">' + abItem.name + '</span>:');
+                          htmlArray.push('<input class="item-text-ipt comm-input" type="text" id="' + idName + '" style="width:' + abItem.iptWidth + '" value="' + (!!abItem.val?abItem.val:"") + '">');
 
                         }
                     }

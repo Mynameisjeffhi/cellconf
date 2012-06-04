@@ -1,12 +1,14 @@
 
 ## A Cell Data-Options Generating Tool
 
-### Usage:
+### USAGE:
 
-* Open index.html in a web browser.
-* Check or Uncheck the CSS or Ability options.
-* And you will get what you want. No need to click buttons to generate, just change the configs and the output will be updated automatically.
+* Open Index.html In A Web Browser.
+* Check Or Uncheck The CSS Or Ability Options.
+* And You Will Get What You Want. 
 
-### TODO
+### FEATURES:
 
-- Under construction, Please wait...
+- No Need To Click Buttons To Generate, Just Change The Configs And The Output Will Be Updated Automatically;
+- The Corresponding JSON String Will Be Highlighted When Been Hovered Or Chosen, Very Convenient For Your Checking;
+- CSS and Ability Items Are Painless Extensible, Just Change The Item Configs Then It Will Work;
