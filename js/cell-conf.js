@@ -3,7 +3,7 @@
  * @ 2012/05/30 13:30:00
  */
 jQuery(function($){
-    // TODO: HOVER 的时候对应配置项json串高亮显示，方便人工校验；editAttr 处理；ability默认值 enable,number
+    // TODO: HOVER 的时候对应配置项json串高亮显示，方便人工校验；editAttr 处理；
     var module = {
         /**
          * 所有可选编辑类型
@@ -30,12 +30,11 @@ jQuery(function($){
                   ],
         /**
          * CELL 具有的 ABILITY 列表，格式比较固定，只需要修改该数组即可添加对应功能的支持
-         * TODO: relative 输入框关键字之间用','隔开，并给予tooltip
          */
         ability : [
-                    {key:'copy',   conf:[{name: 'enable', type: 'checkbox'}, {name:'relative', type:'text', iptWidth: '184px'}]},
-                    {key:'delete', conf:[{name: 'enable', type: 'checkbox'}, {name:'relative', type:'text', iptWidth: '184px'}]},
-                    {key:'container', conf:[{name: 'number', type: 'text', iptWidth: '24px'}, {name:'enableType', type:'text', iptWidth: '90px'}]},
+                    {key:'copy',   conf:[{name: 'enable', type: 'checkbox', checked: true}, {name:'relative', type:'text', iptWidth: '184px'}]},
+                    {key:'delete', conf:[{name: 'enable', type: 'checkbox', checked: true}, {name:'relative', type:'text', iptWidth: '184px'}]},
+                    {key:'container', conf:[{name: 'number', type: 'text', iptWidth: '24px', val: 'n'}, {name:'enableType', type:'text', iptWidth: '90px', val: 'cell'}]},
                     {key:'editAttr'}
                   ],
         /**
@@ -115,13 +114,20 @@ jQuery(function($){
                         if( abItme.type === 'checkbox' ){
 
                           idName = 'item-ck-' + confItem.key + '-' + abItme.name;
-                          htmlArray.push('<input type="checkbox" class="item-ck" id="' + idName + '">');
+
+                          if(abItme.checked){
+                            htmlArray.push('<input type="checkbox" class="item-ck" checked id="' + idName + '">');
+                          }else{
+                            htmlArray.push('<input type="checkbox" class="item-ck" id="' + idName + '">');
+                          }
+
                           htmlArray.push('<label for="' + idName + '">' + abItme.name + '</label>');
 
                         }else if( abItme.type === 'text' ){
+
                           idName = 'item-ipt-' + confItem.key + '-' + abItme.name;
                           htmlArray.push('<span class="item-text-title">' + abItme.name + '</span>:');
-                          htmlArray.push('<input class="item-text-ipt comm-input" type="text" id="' + idName + '" style="width:' + abItme.iptWidth + '" value="">');
+                          htmlArray.push('<input class="item-text-ipt comm-input" type="text" id="' + idName + '" style="width:' + abItme.iptWidth + '" value="' + (!!abItme.val?abItme.val:"") + '">');
 
                         }
                     }
@@ -174,6 +180,7 @@ jQuery(function($){
          * 根据当前选中配置项条目生成配置项值
          */
         _initOutput : function(){
+
             var option = {}, cssArray = [];
 
             $('ul.cell-css input.item-switch:checked').each(function(){
@@ -216,7 +223,7 @@ jQuery(function($){
                 iptVal = $('#item-ipt-container-enableType').val();
                 ability.container.number = $('#item-ipt-container-number').val();
 
-                if($.trim(iptVal) !== '') ability.container.enableType = iptVal.split(',');
+                if($.trim(iptVal) !== '') ability.container.enableType = iptVal;
             };
             if ( $('#item-editAttr').prop('checked') === true ) {
                 ability.editAttr = {};

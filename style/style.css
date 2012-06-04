@@ -19,6 +19,8 @@
 .content .cell-css .css-edit-type{margin: 0 18px 0 6px;}
 .content .sec-title{font-weight:bold;font-size:14px;margin: 12px 15px;}
 .content .relative{margin: 0px 5px 0 36px;}
+.content .tooltip{margin-left: 239px;color: #999;}
+.content .ability{margin-bottom: 0;}
 
 @-moz-document url-prefix() {
   .content .item-switch {height: 16px;}
