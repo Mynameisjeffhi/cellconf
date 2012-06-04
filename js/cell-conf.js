@@ -229,7 +229,7 @@ jQuery(function($){
                 cssItem.key     = $parent.find('label.item-key').text();
                 cssItem.name    = $parent.find('input.item-name').val();
                 cssItem.type    = $parent.find('select.css-edit-type').val();
-                cssItem.disable = $parent.find('input.item-status').prop('checked');
+                cssItem.disable = $parent.find('input.item-status').prop('checked').toString();
 
                 if (pseudo !== '') {
                    cssItem.pseudo  = ':' + pseudo; 
@@ -244,7 +244,7 @@ jQuery(function($){
             if ( $('#item-copy').prop('checked') === true ) {
                 ability.copy = {};
                 iptVal = $('#item-ipt-copy-relative').val();
-                ability.copy.enable = $('#item-ck-copy-enable').prop('checked');
+                ability.copy.enable = $('#item-ck-copy-enable').prop('checked').toString();
 
                 if($.trim(iptVal) !== '') ability.copy.relative = iptVal.split(',');
                 
@@ -252,7 +252,7 @@ jQuery(function($){
             if ( $('#item-delete').prop('checked') === true ) {
                 ability.delete = {};
                 iptVal = $('#item-ipt-delete-relative').val();
-                ability.delete.enable = $('#item-ck-delete-enable').prop('checked');
+                ability.delete.enable = $('#item-ck-delete-enable').prop('checked').toString();
 
                 if($.trim(iptVal) !== '') ability.delete.relative = iptVal.split(',');
 
