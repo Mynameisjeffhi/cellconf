@@ -6,14 +6,16 @@
 .content input{font: 13px "微软雅黑", tahoma;}
 .comm-input{
     margin: 0 9px;border: 1px solid #E3E3E6;width: 150px;
-    height: 16px;line-height: 20px;padding: 3px 6px;
-    background-color: #F3F3F3;}
+    height: 16px;line-height: 20px;padding: 3px 6px;background-color: #F3F3F3;}
 
 .content .cell-css, .content .cell-ability{margin:10px 10px 10px 15px; }
-.content .option-output{margin:10px 10px 50px 15px;border:1px dashed #DDD;padding: 10px 20px;overflow: hidden;}
+.content .option-output{margin:10px 10px 50px 15px;border:1px dashed #DDD;padding: 10px 20px;
+    overflow: hidden;word-wrap: break-word;word-break:break-all; }
+.content .option-output em{color: #C40000;font-weight: normal;}
 .content .item{height:30px;line-height: 11px;}
 .content .item-switch,.content .item-enable{margin-right: 8px;}
-.content .item-key{width: 110px;display: inline-block;overflow: hidden;border-left: 2px solid #5f7fff;padding-left: 8px;height: 15px;}
+.content .item-key{width: 110px;display: inline-block;overflow: hidden;border-left: 2px solid #5f7fff;
+    padding-left: 8px;height: 15px;}
 .content .cell-css select,.content .cell-css .item-status,.content .cell-ability .item-ck{margin: 0 6px;}
 .content .cell-ability .item-text-title{margin: 0 6px 0px 24px;}
 .content .cell-css .css-edit-type{margin: 0 18px 0 6px;}
@@ -26,3 +28,4 @@
   .content .item-switch {height: 16px;}
   .content .item-key{height:20px;}
 }
+
