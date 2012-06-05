@@ -250,11 +250,12 @@ jQuery(function($){
                 
             };
             if ( $('#item-delete').prop('checked') === true ) {
-                ability.delete = {};
+                // Use ability['delete'] instead of ability.delete to avoid errors in IE
+                ability['delete'] = {};
                 iptVal = $('#item-ipt-delete-relative').val();
-                ability.delete.enable = $('#item-ck-delete-enable').prop('checked').toString();
+                ability['delete'].enable = $('#item-ck-delete-enable').prop('checked').toString();
 
-                if($.trim(iptVal) !== '') ability.delete.relative = iptVal.split(',');
+                if($.trim(iptVal) !== '') ability['delete'].relative = iptVal.split(',');
 
             };
             if ( $('#item-container').prop('checked') === true ) {
