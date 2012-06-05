@@ -79,7 +79,7 @@ jQuery(function($){
             for(var i = 0, l = this.cssList.length; i < l; i++){
 
                 confItem = this.cssList[i];
-                htmlArray.push('<li class="item">')
+                htmlArray.push('<li class="item">');
                 htmlArray.push('<input type="checkbox" class="item-switch" id="item-' + confItem.key + '">');
                 htmlArray.push('<label for="item-' + confItem.key + '" class="item-key">' + confItem.key + '</label>编辑类型: ');
                 // 如果配置了默认的编辑类型则将此编辑类型设为选中状态

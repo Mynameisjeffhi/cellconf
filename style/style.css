@@ -25,7 +25,7 @@
 .content .ability{margin-bottom: 0;}
 
 @-moz-document url-prefix() {
-  .content .item-switch {height: 16px;}
-  .content .item-key{height:20px;}
+  .content .item-switch {height: 20px;}
+  .content .item-key{height:15px;}
 }
 
