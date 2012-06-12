@@ -303,7 +303,9 @@ jQuery(function($){
                     output  = text.substring(0, start) + '<em>' + text.substring(start, end + 1) + '</em>' + text.substring(end + 1);
 
                 module.$output.html(output);
+                return false;
             }
+            module.$output.text(module.$output.data('option'));
             return false;
 
         }

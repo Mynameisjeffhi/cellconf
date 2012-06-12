@@ -1,8 +1,8 @@
 @charset "utf8";
 
-.conf-header,.conf-footer{width: 952px;margin:0 auto;}
+.conf-header,.conf-footer{width: 900px;margin:0 auto;}
 .conf-header h1{font-weight: bold;font-size: 15px;color: #333;margin: 20px 6px;}
-.content {width: 952px;margin:0 auto 30px;/*border:1px dashed #DDD;*/}
+.content {width: 900px;margin:0 auto 30px;/*border:1px dashed #DDD;*/}
 .content input{font: 13px "微软雅黑", tahoma;}
 .comm-input{
     margin: 0 9px;border: 1px solid #E3E3E6;width: 150px;
